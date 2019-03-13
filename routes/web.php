@@ -17,4 +17,8 @@ Route::get('/', function () {
 
 Auth::routes();
 
-Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/dashboard', 'HomeController@index');
+Route::get('/tributes/admin_trib', 'TributeController@trib_index');
+Route::resource('posts', 'PostController');
+Route::resource('tributes', 'TributeController');
+Route::resource('uploads', 'UploadController');
